@@ -15,9 +15,10 @@ const ColorSwatch = ({ storeVariable, colorVariable }: TColorSwatch) => {
   const dispatch = useDispatch();
 
   const handleChange = (eventValue: string) => {
-    document
-      .querySelector(":root")
-      ?.style.setProperty(colorVariable, convertHEXtoHSL_Updated(eventValue));
+    (document.querySelector(":root") as HTMLElement)?.style.setProperty(
+      colorVariable,
+      convertHEXtoHSL_Updated(eventValue)
+    );
     dispatch(setThemeProperty({ property: storeVariable, value: eventValue }));
   };
 
