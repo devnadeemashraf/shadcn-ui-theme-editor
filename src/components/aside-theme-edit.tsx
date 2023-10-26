@@ -20,7 +20,7 @@ const SwatchMap: TSwatchMap = [
     colorVariable: "--primary",
   },
   {
-    storeVariable: "primaryForeground",
+    storeVariable: "primary_foreground",
     colorVariable: "--primary-foreground",
   },
   {
@@ -28,7 +28,7 @@ const SwatchMap: TSwatchMap = [
     colorVariable: "--secondary",
   },
   {
-    storeVariable: "secondaryForeground",
+    storeVariable: "secondary_foreground",
     colorVariable: "--secondary-foreground",
   },
   {
@@ -44,7 +44,7 @@ const SwatchMap: TSwatchMap = [
     colorVariable: "--card",
   },
   {
-    storeVariable: "cardForeground",
+    storeVariable: "card_foreground",
     colorVariable: "--card-foreground",
   },
   {
@@ -52,7 +52,7 @@ const SwatchMap: TSwatchMap = [
     colorVariable: "--popover",
   },
   {
-    storeVariable: "popoverForeground",
+    storeVariable: "popover_foreground",
     colorVariable: "--popover-foreground",
   },
   {
@@ -60,7 +60,7 @@ const SwatchMap: TSwatchMap = [
     colorVariable: "--muted",
   },
   {
-    storeVariable: "mutedForeground",
+    storeVariable: "muted_foreground",
     colorVariable: "--muted-foreground",
   },
   {
@@ -68,7 +68,7 @@ const SwatchMap: TSwatchMap = [
     colorVariable: "--accent",
   },
   {
-    storeVariable: "accentForeground",
+    storeVariable: "accent_foreground",
     colorVariable: "--accent-foreground",
   },
   {
@@ -76,7 +76,7 @@ const SwatchMap: TSwatchMap = [
     colorVariable: "--destructive",
   },
   {
-    storeVariable: "destructiveForeground",
+    storeVariable: "destructive_foreground",
     colorVariable: "--destructive-foreground",
   },
   {
