@@ -86,17 +86,17 @@ body,
   -moz-appearance: none;
   appearance: none;
   width: 60px;
-  height: 32px;
+  height: 40px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 #color-swatch::-webkit-color-swatch {
-  border-radius: 6px;
+  border-radius: var(--radius);
   border: none;
 }
 #color-swatch::-moz-color-swatch {
-  border-radius: 6px;
+  border-radius: var(--radius);
   border: none;
 }
 

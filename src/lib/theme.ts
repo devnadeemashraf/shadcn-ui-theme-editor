@@ -1,107 +1,108 @@
 import { ROOT_PROPERTY_NAME } from "@/types/enum";
-import { TProperty } from "@/types/theme";
+import { TRootProperties, TStateProperties } from "@/types/theme";
+import { convertHSLtoHEX_Updated } from "./utils";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 const root_theme: HTMLElement | null = document.querySelector(":root");
 const appStyle: CSSStyleDeclaration = getComputedStyle(document.body);
 
-export const getCurrentValueForProperty = (property: TProperty) => {
+export const getCurrentValueForProperty = (property: TStateProperties) => {
   switch (property) {
     case "background": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.BACKGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "card": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.CARD);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
-    case "cardForeground": {
+    case "card_foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.CARD_FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "popover": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.POPOVER);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
-    case "popoverForeground": {
+    case "popover_foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.POPOVER_FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "primary": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.PRIMARY);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
-    case "primaryForeground": {
+    case "primary_foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.PRIMARY_FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "secondary": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.SECONDARY);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
-    case "secondaryForeground": {
+    case "secondary_foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.SECONDARY_FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "muted": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.MUTED);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
-    case "mutedForeground": {
+    case "muted_foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.MUTED_FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "accent": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.ACCENT);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
-    case "accentForeground": {
+    case "accent_foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.ACCENT_FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "destructive": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.DESTRUCTIVE
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
-    case "destructiveForeground": {
+    case "destructive_foreground": {
       const currValue = appStyle.getPropertyValue(
         ROOT_PROPERTY_NAME.DESTRUCTIVE_FOREGROUND
       );
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "border": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.BORDER);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "input": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.INPUT);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "ring": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.RING);
-      return currValue;
+      return convertHSLtoHEX_Updated(currValue);
     }
     case "radius": {
       const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.RADIUS);
@@ -110,7 +111,114 @@ export const getCurrentValueForProperty = (property: TProperty) => {
   }
 };
 
-export const setTheme = (property: TProperty, value: string | "all") => {
+export const getCurrentValueForPropertyUpdated = (
+  property: TRootProperties
+) => {
+  switch (property) {
+    case "--background": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.BACKGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--card": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.CARD);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--card-foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.CARD_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--popover": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.POPOVER);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--popover-foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.POPOVER_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--primary": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.PRIMARY);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--primary-foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.PRIMARY_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--secondary": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.SECONDARY);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--secondary-foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.SECONDARY_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--muted": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.MUTED);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--muted-foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.MUTED_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--accent": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.ACCENT);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--accent-foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.ACCENT_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--destructive": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.DESTRUCTIVE
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--destructive-foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.DESTRUCTIVE_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--border": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.BORDER);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--input": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.INPUT);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--ring": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.RING);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "--radius": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.RADIUS);
+      return currValue;
+    }
+  }
+};
+
+export const setTheme = (property: TStateProperties, value: string | "all") => {
   switch (property) {
     case "background": {
       // Set background
@@ -127,7 +235,7 @@ export const setTheme = (property: TProperty, value: string | "all") => {
       root_theme?.style.setProperty(ROOT_PROPERTY_NAME.CARD, value);
       break;
     }
-    case "cardForeground": {
+    case "card_foreground": {
       // Set cardForeground
       root_theme?.style.setProperty(ROOT_PROPERTY_NAME.CARD_FOREGROUND, value);
       break;
@@ -137,7 +245,7 @@ export const setTheme = (property: TProperty, value: string | "all") => {
       root_theme?.style.setProperty(ROOT_PROPERTY_NAME.POPOVER, value);
       break;
     }
-    case "popoverForeground": {
+    case "popover_foreground": {
       // Set popoverForeground
       root_theme?.style.setProperty(
         ROOT_PROPERTY_NAME.POPOVER_FOREGROUND,
@@ -145,12 +253,43 @@ export const setTheme = (property: TProperty, value: string | "all") => {
       );
       break;
     }
+    case "primary": {
+      root_theme?.style.setProperty(ROOT_PROPERTY_NAME.PRIMARY, value);
+      break;
+    }
+    case "primary_foreground": {
+      root_theme?.style.setProperty(
+        ROOT_PROPERTY_NAME.PRIMARY_FOREGROUND,
+        value
+      );
+      break;
+    }
+    case "secondary": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.SECONDARY);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "secondary_foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.SECONDARY_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "muted": {
+      const currValue = appStyle.getPropertyValue(ROOT_PROPERTY_NAME.MUTED);
+      return convertHSLtoHEX_Updated(currValue);
+    }
+    case "muted_foreground": {
+      const currValue = appStyle.getPropertyValue(
+        ROOT_PROPERTY_NAME.MUTED_FOREGROUND
+      );
+      return convertHSLtoHEX_Updated(currValue);
+    }
     case "accent": {
       // Set accent
       root_theme?.style.setProperty(ROOT_PROPERTY_NAME.ACCENT, value);
       break;
     }
-    case "accentForeground": {
+    case "accent_foreground": {
       // Set accentForeground
       root_theme?.style.setProperty(
         ROOT_PROPERTY_NAME.ACCENT_FOREGROUND,
@@ -163,7 +302,7 @@ export const setTheme = (property: TProperty, value: string | "all") => {
       root_theme?.style.setProperty(ROOT_PROPERTY_NAME.DESTRUCTIVE, value);
       break;
     }
-    case "destructiveForeground": {
+    case "destructive_foreground": {
       // Set destructive
       root_theme?.style.setProperty(
         ROOT_PROPERTY_NAME.DESTRUCTIVE_FOREGROUND,

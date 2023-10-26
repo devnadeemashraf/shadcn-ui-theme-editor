@@ -1,15 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/navbar";
-import { ThemeProvider } from "./components/theme-provider";
+import RootProvider from "./components/root-provider";
 
 import { Toaster } from "./components/ui/toaster";
 
 import Home from "@/Home";
+import useGetAppTheme from "./hooks/useGetAppTheme";
 
 function App() {
-  return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+  const loading = useGetAppTheme();
+
+  return loading == true ? (
+    <h1>Loading</h1>
+  ) : (
+    <RootProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -17,7 +22,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Toaster />
-    </ThemeProvider>
+    </RootProvider>
   );
 }
 
