@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import ShadcnUIIcon from "./shadcn-ui-icon";
+
 import { ModeToggle } from "./mode-toggle";
 
 import { useToast } from "./ui/use-toast";
@@ -12,35 +14,7 @@ const Navbar = () => {
       <div className="flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
           <Link className="mr-6 flex items-center space-x-2" to="/">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 256 256"
-              className="h-6 w-6"
-            >
-              <rect width="256" height="256" fill="none"></rect>
-              <line
-                x1="208"
-                y1="128"
-                x2="128"
-                y2="208"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-              <line
-                x1="192"
-                y1="40"
-                x2="40"
-                y2="192"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="16"
-              ></line>
-            </svg>
+            <ShadcnUIIcon />
             <span className="hidden font-bold sm:inline-block">
               Theme Editor
             </span>
@@ -89,7 +63,11 @@ const Navbar = () => {
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <nav className="flex items-center">
             {/* Github */}
-            <a target="_blank" rel="noreferrer" href="https://github.com/devNadeemAshraf/shadcn-ui-theme-editor">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/devNadeemAshraf/shadcn-ui-theme-editor"
+            >
               <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0">
                 <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">
                   <path
