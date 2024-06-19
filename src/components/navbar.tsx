@@ -21,6 +21,12 @@ const Navbar = () => {
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             <Link
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+              to="/blocks"
+            >
+              Blocks
+            </Link>
+            <Link
               onClick={() => {
                 toast({
                   title: "Hey There",

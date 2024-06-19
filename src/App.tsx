@@ -5,7 +5,8 @@ import RootProvider from "./components/root-provider";
 
 import { Toaster } from "./components/ui/toaster";
 
-import Home from "@/Home";
+import Home from "@/pages/Home";
+import Blocks from "@/pages/Blocks";
 import useGetAppTheme from "./hooks/useGetAppTheme";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/blocks" element={<Blocks />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
