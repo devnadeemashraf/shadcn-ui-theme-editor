@@ -1,7 +1,9 @@
 import BlockTab from "./tabs/block";
 import HomeTab from "./tabs/home";
 
-const TabsListConfig = [
+import { TTabsLists } from "./_types";
+
+const TabsListConfig: TTabsLists = [
   {
     label: "Home",
     value: "home",

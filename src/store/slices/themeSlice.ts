@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 import { DEFAULT_THEME_STATE } from "@/constants";
+
 import { TThemeState } from "@/types/theme";
 
 const initialState = {
