@@ -1,4 +1,4 @@
-import AsideThemeEdit from "./components/aside-theme-edit";
+import AsideThemeEdit from "../components/aside-theme-edit";
 
 const Home = () => {
   return (
