@@ -1,7 +1,10 @@
 # shadcn/ui Theme Editor
 
-Currently you can test out different color schemes and see  how the app would look like and this app still requires some work. 
+Application has be re-written from scratch making it more manageable and clean!
+I will be completing this README.md file once I get some more time.
 
-Please consider giving a star if you found this useful also I am open to contributions too, have an idea? want a feature? want to improve something? you are more than welcome!
+Currently, the application should be in a really good shape to contribute to.
 
-Create some PRs and I'll be more than happy to merge them to the codebase.
+Feel free to reachout to me in case of any questions or queries via Linkedin or Email (You can find that on my Gihub Profile Page)
+
+❤️

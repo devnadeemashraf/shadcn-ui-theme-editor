@@ -1,13 +1,14 @@
-import { ThemeProvider } from "./theme-provider";
+import { PropsWithChildren } from "react";
+
 import { TooltipProvider } from "./ui/tooltip";
 
-type RootProviderProps = {
-  children: React.ReactNode;
-};
+import { ThemeProvider } from "./themeProvider";
+
+interface RootProviderProps extends PropsWithChildren {}
 
 const RootProvider = ({ children }: RootProviderProps) => {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="sui-theme-editor-theme">
       <TooltipProvider>{children}</TooltipProvider>
     </ThemeProvider>
   );

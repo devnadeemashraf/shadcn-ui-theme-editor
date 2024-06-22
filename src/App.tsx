@@ -1,20 +1,24 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Navbar from "./components/navbar";
-import RootProvider from "./components/root-provider";
+import { Toaster } from "@/components/ui/toaster";
 
-import { Toaster } from "./components/ui/toaster";
+import Navbar from "@/components/shared/navbar";
+import RootProvider from "@/components/rootProvider";
 
+import Loading from "@/pages/Loading";
 import Home from "@/pages/Home";
 import Blocks from "@/pages/Blocks";
-import useGetAppTheme from "./hooks/useGetAppTheme";
+
+import useAppTheme from "@/hooks/useAppTheme";
 
 function App() {
-  const loading = useGetAppTheme();
+  const { loading } = useAppTheme();
 
-  return loading == true ? (
-    <h1>Loading</h1>
-  ) : (
+  if (loading) {
+    return <Loading />;
+  }
+
+  return (
     <RootProvider>
       <BrowserRouter>
         <Navbar />
