@@ -1,0 +1,5 @@
+# Allow All Bots Everything
+User-agent: *
+Disallow: 
+
+Sitemap: https://shadcnui-theme-editor.nadeemashraf.dev/sitemap.xml
